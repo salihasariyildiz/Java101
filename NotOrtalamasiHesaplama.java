@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class Main {
+public class notOrtalamasiHesaplama {
     public static void main(String[] args) {
         // Değişkenleri oluştur
 
         int mat, fizik, turkce, kimya, tarih, muzik;
 
         // Scanner sınıfımızı tanımladık.
-        Scanner inp = new Scanner (System.in);
+        Scanner inp = new Scanner(System.in);
 
         // Kullanıcıdan değerleri al.
         System.out.print("Matematik Notunuz :");
@@ -31,13 +31,15 @@ public class Main {
 
         int toplam = (mat + fizik + turkce + kimya + tarih + muzik);
         double sonuc = (toplam / 6.0);
-        System.out.println("Ortalamanız :" +sonuc);
+        System.out.println("Ortalamanız :" + sonuc);
 
-        System.out.println(sonuc>60 ? "Geçti" : "Kaldı") ;
-
-
-
+        boolean kosul = (sonuc >=60);
+        String sinifigecti = (kosul)? "Sınıfı Geçti" : "Sınıfta Kaldı";
+        System.out.println(sinifigecti);
 
 
     }
 }
+
+
+
